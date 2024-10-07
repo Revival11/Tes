@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Teken</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>teken</h1>
+    <h1>👇</h1>
+    <button id="actionButton">tombol</button>
+    <div id="message"></div>
+
+    <script>
+        // Daftar pesan yang akan ditampilkan saat tombol ditekan
+        const messages = [
+            "Coba sekali lagi",
+            "Teken Lagi",
+            "Teken Trus",
+            "Dikit Lagi",
+            "udah mau sampe Ke Web Utama",
+            "Awokawokawok gk ada apa2"
+        ];
+
+        let index = 0; // Untuk melacak indeks pesan
+
+        document.getElementById('actionButton').addEventListener('click', function() {
+            if (index < messages.length) {
+                document.getElementById('message').textContent = messages[index];
+                index++; // Meningkatkan indeks setelah menekan tombol
+            }
+        });
+    </script>
+
+</body>
+</html>
